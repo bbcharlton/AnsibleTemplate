@@ -96,13 +96,12 @@ ___
 
 > ### 7. Ansible Automation Instruction
 
-The Ansible file structure has 5 roles:
+The Ansible file structure has 4 roles:
 
 * **server**
 * **nginx**
 * **node**
 * **wordpress**
-* **github**
 
 > ##### 1. Server Role
 
@@ -168,10 +167,6 @@ auto_up_disable: false
 core_update_level: true
 ```
 
-> ##### 5. Github Role
-
-This role is used to clone your repos into your working directories. You may customize the **main.yml** file in the **tasks** folder to clone your repos in your desired locations. This should only be ran once for initialization.
-
 ___
 
 > ### 8. Playbook File
@@ -191,7 +186,7 @@ ___
       - github
 ```
 
-The playbook is what decided which roles you'll be applying to your servers. It's completeley modular, so if you want to add multiple server documents for your servers, simply just add the **server** role and refer to the section on its details above. Remember to only use the **github** role once for initialization. The rest can be ran however many times you need.
+The playbook is what decided which roles you'll be applying to your servers. It's completeley modular, so if you want to add multiple server documents for your servers, simply just add the **server** role and refer to the section on its details above.
 
 ___
 
