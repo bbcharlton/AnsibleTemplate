@@ -1,0 +1,23 @@
+---
+- name: Change to working directory
+  shell: cd /var/www/html
+
+- name: Clone StaticRepo1
+  shell: git clone https://github.com/bbcharlton/StaticRepo1.git
+
+- name: Clone StaticRepo2
+  shell: git clone https://github.com/bbcharlton/StaticRepo2.git
+
+- name: Clone StaticRepo3
+  shell: git clone https://github.com/bbcharlton/StaticRepo3.git
+
+- name: Clone NodeRepo1
+  shell: git clone https://github.com/bbcharlton/NodeRepo1.git
+
+- name: Change to Wordpress themes directory
+  shell: cd WordpressRepo1/wordpress/wp-content/themes
+
+- name: Clone WordpressRepo1
+  shell: git clone https://github.com/bbcharlton/WordpressRepo1.git
+  notify:
+    - Reload Nginx
