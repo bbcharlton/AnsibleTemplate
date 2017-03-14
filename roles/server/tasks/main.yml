@@ -1,0 +1,8 @@
+---
+- name: Add Server {{ project }} Config
+  template: src={{ tech }}-{{ project }} dest=/etc/nginx/sites-available/{{ tech }}-{{ project }} owner=root group=root
+
+- name: Enable Site Config
+  file: src=/etc/nginx/sites-available/{{ tech }}-{{ project }} dest=/etc/nginx/sites-enabled/{{ tech }}-{{ project }} state=link
+  notify:
+    - Reload Nginx
