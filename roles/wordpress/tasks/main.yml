@@ -20,7 +20,7 @@
 - command: mkdir /var/www/html/{{ project }}
 
 - name: Download WordPress
-  get_url: url=http://wordpress.org/wordpress-{{ wp_version }}.tar.gz dest=/var/www/html/wordpress-{{ wp_version }}.tar.gz
+  get_url: url=http://wordpress.org/wordpress-{{ wp_version }}.tar.gz dest=/var/www/html/{{ project }}wordpress-{{ wp_version }}.tar.gz
 
 - name: Extract Wordpress Files
   command: chdir=/var/www/html/{{ project }} /bin/tar xvf wordpress-{{ wp_version }}.tar.gz creates=/var/www/html/{{ project }}/wordpress
