@@ -1,0 +1,8 @@
+---
+project:
+wp_version: 4.7.2
+wp_db_name:
+wp_db_user:
+wp_db_password:
+auto_up_disable: false
+core_update_level: true
