@@ -1,8 +1,9 @@
 ---
 project:
-wp_version: 4.7.2
+wp_version: 4.7.3
 wp_db_name:
-wp_db_user:
-wp_db_password:
+non_root_user:
+non_root_password:
+ssh_public_key:
 auto_up_disable: false
 core_update_level: true
